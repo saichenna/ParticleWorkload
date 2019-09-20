@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n    <expression enabled\="true" text\="thirdInput.getCount()"/>\r\n    <expression enabled\="true" text\="this.getCount()"/>\r\n    <expression enabled\="true" text\="fileMem.size()"/>\r\n    <expression enabled\="true" text\="threadPool.get(99)"/>\r\n    <expression enabled\="true" text\="this.getCount()"/>\r\n    <expression enabled\="true" text\="output2.toString()"/>\r\n</watchExpressions>\r\n

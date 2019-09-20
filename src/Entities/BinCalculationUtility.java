@@ -5,17 +5,17 @@ import Utilities.ArgumentValues;
 public class BinCalculationUtility {
 	private ArgumentValues args;
 	
-	private int nDxGp;
+	public int nDxGp;
 	
-	private int nDyGp;
+	public int nDyGp;
 	
-	private int nDzGp;
+	public int nDzGp;
 	
-	private int rDxGp;
+	public double rDxGp;
 	
-	private int rDyGp;
+	public double rDyGp;
 	
-	private int rDzGp;
+	public double rDzGp;
 	
 	public BinCalculationUtility(ArgumentValues args) {
 		this.args = args;

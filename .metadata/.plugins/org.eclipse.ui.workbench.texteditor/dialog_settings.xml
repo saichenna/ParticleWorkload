@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="inModule bin = new BinModule(Integer.parseInt(binMap[0]),Integer.parseInt(binMap[1]),Integer.parseInt(binMap[2]));"/>
+		<list key="findhistory">
+			<item value="inModule bin = new BinModule(Integer.parseInt(binMap[0]),Integer.parseInt(binMap[1]),Integer.parseInt(binMap[2]));"/>
+			<item value="BinModule bin = new BinModule(Integer.parseInt(binMap[0]),Integer.parseInt(binMap[1]),Integer.parseInt(binMap[2]));"/>
+		</list>
+	</section>
+</section>

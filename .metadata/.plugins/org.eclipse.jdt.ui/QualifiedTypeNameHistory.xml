@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="Entities.BinModule"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="Inputs.StringToIntConverter"/>
+    <fullyQualifiedTypeName name="Inputs.StringScalingData"/>
+    <fullyQualifiedTypeName name="Inputs.StringRankToElementMap"/>
+    <fullyQualifiedTypeName name="TKey1"/>
+    <fullyQualifiedTypeName name="java.sql.Time"/>
+    <fullyQualifiedTypeName name="Outputs.StringParticleCount"/>
+    <fullyQualifiedTypeName name="Outputs.RankDiff"/>
+    <fullyQualifiedTypeName name="Outputs.StringParticleMovement"/>
+    <fullyQualifiedTypeName name="Inputs.StringBinToRankMap"/>
+    <fullyQualifiedTypeName name="Outputs.StringGhostParticleOutput"/>
+</qualifiedTypeNameHistroy>
