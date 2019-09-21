@@ -31,8 +31,8 @@ public class DictionaryUtilities<TKey, TValue> {
 		}
 		else {
 			this.counter++;
-//			System.out.println(key.i+","+key.j+","+key.k);
-//			System.out.println("Count:"+counter);
+			System.out.println(key.i+","+key.j+","+key.k);
+			System.out.println("Count:"+counter);
 			lst = new ArrayList<Integer>(value);
 		}
 		/*

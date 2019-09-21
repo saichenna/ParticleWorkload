@@ -12,12 +12,11 @@ public class DictionaryUtilities<TKey, TValue> {
 	private Hashtable<BinModule,List<Integer>> dict;
 //	private BinModule key ;
 //	private List<Integer> valuelist;
-	private int counter;
+	
 	
 	
 	public DictionaryUtilities() {
 		this.dict = new Hashtable<BinModule,List<Integer>>();
-		this.counter = 0;
 		
 	}
 	
@@ -30,9 +29,6 @@ public class DictionaryUtilities<TKey, TValue> {
 
 		}
 		else {
-			this.counter++;
-//			System.out.println(key.i+","+key.j+","+key.k);
-//			System.out.println("Count:"+counter);
 			lst = new ArrayList<Integer>(value);
 		}
 		/*

@@ -126,8 +126,8 @@ public class ParticleWorkload {
 			}			
 		}
 		long endTime = System.nanoTime();
-		var timeTaken = (endTime - startTime)/1000000000; //divide by 1000000 to get milliseconds.
-		System.out.println("Time taken="+timeTaken+" seconds");
+		var timeTaken = (endTime - startTime)/1000000; //divide by 1000000 to get milliseconds.
+		
 		 var abc = new PrintWriter(ioFileNames.firstOutput, "UTF-8");
          var def = new PrintWriter(ioFileNames.secondOutput, "UTF-8");
          var ghi = new PrintWriter(ioFileNames.thirdOutput,"UTF-8");

@@ -100,7 +100,7 @@ public class ElementData {
 				kmax = Math.max(kmax, bin.k);
 				
 //				BinModule test = new BinModule(169,0,2); // debug purposes only
-
+				System.out.println(imin+","+imax+","+jmin+","+jmax+","+kmin+","+kmax);
 				for (int i = (int) imin; i < (int)imax+1; i++ ) {
 					for (int j = (int)jmin; j < (int)jmax+1; j++) {
 						for (int k = (int) kmin; k < (int)kmax+1; k++) {
@@ -122,8 +122,7 @@ public class ElementData {
 						}
 					}
 				}
-//				System.out.println(corner.x+","+corner.y+","+corner.z);
-//				System.out.println(imin+","+imax+","+jmin+","+jmax+","+kmin+","+kmax);				
+				
 				
 			}
 			

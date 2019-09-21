@@ -122,8 +122,8 @@ public class ElementData {
 						}
 					}
 				}
-//				System.out.println(corner.x+","+corner.y+","+corner.z);
-//				System.out.println(imin+","+imax+","+jmin+","+jmax+","+kmin+","+kmax);				
+				System.out.println(corner.x+","+corner.y+","+corner.z);
+				System.out.println(imin+","+imax+","+jmin+","+jmax+","+kmin+","+kmax);				
 				
 			}
 			
