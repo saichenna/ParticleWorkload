@@ -32,8 +32,8 @@ public class ParticleElementMap {
 		return this.nextLine != null;
 	}
 	
-	public ParticleElementEntry getNext() {
-		
-		return null;
+	public String getNext() {
+		return this.nextLine;
+//		return null;
 	}
 }

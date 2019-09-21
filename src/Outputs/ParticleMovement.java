@@ -32,4 +32,21 @@ public class ParticleMovement {
 			this.oldParticlePosition.put(p, currentRank);
 		}
 	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		for (RankDiff key: this.output.keySet()) {
+			Hashtable<Integer, Integer> timeBasedCount = this.output.get(key);
+			for(int ts:timeBasedCount.keySet()) {
+				sb.append(key.sourceRank+",");
+				sb.append(key.destinationRank+",");
+				sb.append(ts+",");
+				sb.append(timeBasedCount.get(ts)+"\n");	
+			}
+			
+		}
+		
+		return sb.toString();
+	}
 }

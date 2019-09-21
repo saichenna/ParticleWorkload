@@ -1,0 +1,45 @@
+package Utilities;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Hashtable;
+import java.util.List;
+
+import Entities.BinModule;
+
+public class DictionaryUtilities<TKey, TValue> {
+	
+	private Hashtable<BinModule,List<Integer>> dict;
+//	private BinModule key ;
+//	private List<Integer> valuelist;
+	
+	
+	
+	public DictionaryUtilities() {
+		this.dict = new Hashtable<BinModule,List<Integer>>();
+		
+	}
+	
+	public void AddTo(BinModule key, int value)
+	{
+		List<Integer> lst = new ArrayList<Integer>();
+		if (this.dict.containsKey(key)) {
+			lst = this.dict.get(key);
+			lst.add(value);
+
+		}
+		else {
+			lst = new ArrayList<Integer>(value);
+		}
+		this.dict.put(key,lst);		
+	}
+	
+	public List<Integer> Get(BinModule key){
+		System.out.println(this.dict.get(key));
+		return this.dict.get(key);
+	}
+	
+	public boolean ContainsKey(BinModule key) {
+		return this.dict.containsKey(key);
+	}
+}

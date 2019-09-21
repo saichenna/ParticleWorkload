@@ -1,6 +1,7 @@
 package Utilities;
 
 import java.util.Hashtable;
+import java.util.Set;
 
 public class NestedCounterHashtable<TKey1, TKey2> {
 	
@@ -32,5 +33,17 @@ public class NestedCounterHashtable<TKey1, TKey2> {
 	
 	public boolean ContainsKey(TKey1 key1, TKey2 key2) {
 		return !this.map.containsKey(key1) ? false : this.map.get(key1).containsKey(key2);
+	}
+	
+	public Hashtable<TKey2, Integer> get(TKey1 key1){
+		return this.map.get(key1);
+	}
+	
+	public int get(TKey1 key1, TKey2 key2) {
+		return this.get(key1).get(key2);
+	}
+	
+	public Set<TKey1> keySet(){
+		return this.map.keySet();
 	}
 }
