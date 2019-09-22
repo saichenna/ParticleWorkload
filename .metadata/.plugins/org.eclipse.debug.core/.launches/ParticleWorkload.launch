@@ -9,6 +9,6 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="ParticleWorkload"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-Xmx2048m Input_args.txt Input_filenames.txt"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="Input_args.txt Input_filenames.txt"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="src"/>
 </launchConfiguration>

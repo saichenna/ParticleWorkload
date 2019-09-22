@@ -119,7 +119,9 @@ public class ParticleWorkload {
 				output2.Insert(syntheticParticle, Integer.toString(actualRank), entry.timeStep);
 				output3.Insert(bin, Integer.toString(actualRank), entry.timeStep);				
 				
-				
+				syntheticParticle = null;
+				newlocation = null;
+				Elemlist = null; 
 				
 				
 				
