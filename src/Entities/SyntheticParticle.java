@@ -38,7 +38,7 @@ public class SyntheticParticle {
 	
 	@Override
 	public boolean equals(Object obj) {
-		Particle particle = (Particle) obj;
+		SyntheticParticle particle = (SyntheticParticle) obj;
 		return particle.v == this.v && particle.w == this.w && particle.x == this.x && particle.y == this.y && particle.z == this.z ;
 	}
 	

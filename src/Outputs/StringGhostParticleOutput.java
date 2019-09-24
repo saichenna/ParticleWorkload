@@ -1,6 +1,7 @@
 package Outputs;
 
 import java.util.ArrayList;
+import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.List;
 
@@ -8,9 +9,12 @@ import Entities.BinModule;
 import Inputs.ElementData;
 import Inputs.StringBinToRankMap;
 import Utilities.CustomTuple;
+import Utilities.IntegertoString;
 import Utilities.NestedCounterHashtable;
 
 public class StringGhostParticleOutput {
+
+	private IntegertoString itos;
 	private NestedCounterHashtable<String, String> ghostParticleCount;
 	
 	private NestedCounterHashtable<RankDiff, String> ghostParticleMovement;
@@ -60,7 +64,7 @@ public class StringGhostParticleOutput {
 //	}
 	
 	//version 3.0
-	public StringGhostParticleOutput(ElementData elemData, int ndxgp, int ndygp, int ndzgp) {
+	public StringGhostParticleOutput(ElementData elemData, int ndxgp, int ndygp, int ndzgp, IntegertoString itos) {
 		this.ghostParticleCount = new NestedCounterHashtable<>();
 		this.ghostParticleMovement = new NestedCounterHashtable<>();
 		this.elemData = elemData;
@@ -70,6 +74,8 @@ public class StringGhostParticleOutput {
 		this.ndxgp = ndxgp;
 		this.ndygp = ndygp;
 		this.ndzgp = ndzgp;
+		this.itos = itos;
+
 
 	}
 	
@@ -118,8 +124,8 @@ public class StringGhostParticleOutput {
 			List<Integer> otherRanks = this.elemData.GetRankFromBin(bin);
 			for (Integer otherRank : otherRanks) {
 				
-				if(!Integer.toString(otherRank).equals(currentRank)) {
-					this.ghostParticleCount.Insert(Integer.toString(otherRank), timeStep);
+				if(!this.itos.GetString(otherRank).equals(currentRank)) {
+					this.ghostParticleCount.Insert(this.itos.GetString(otherRank), timeStep);
 					this.ghostParticleMovement.Insert(new RankDiff(Integer.parseInt(currentRank), otherRank), timeStep);
 				}
 			}
@@ -189,8 +195,8 @@ public class StringGhostParticleOutput {
 			List<Integer> otherRanks = this.elemData.GetRankFromBin(bin);
 			for (Integer otherRank : otherRanks) {
 				
-				if(!Integer.toString(otherRank).equals(currentRank) || (Integer.toString(otherRank).equals(currentRank) && iFlgSum == shapeType)) {
-					this.ghostParticleCount.Insert(Integer.toString(otherRank), timeStep);
+				if(!this.itos.GetString(otherRank).equals(currentRank) || (this.itos.GetString(otherRank).equals(currentRank) && iFlgSum == shapeType)) {
+					this.ghostParticleCount.Insert(this.itos.GetString(otherRank), timeStep);
 					this.ghostParticleMovement.Insert(new RankDiff(Integer.parseInt(currentRank), otherRank), timeStep);
 				}
 			}

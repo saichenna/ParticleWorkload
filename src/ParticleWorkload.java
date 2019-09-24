@@ -18,6 +18,7 @@ import Outputs.StringParticleCount;
 import Outputs.StringParticleMovement;
 import Utilities.ArgumentValues;
 import Utilities.IOFileNames;
+import Utilities.IntegertoString;
 
 public class ParticleWorkload {
 
@@ -33,7 +34,7 @@ public class ParticleWorkload {
 	     
 	     ArgumentValues inputAargs = new ArgumentValues(argsFileName);
 	     IOFileNames ioFileNames = new IOFileNames(ioFileName);
-	     
+
 	     System.out.println("Running!");
 	     Run(inputAargs, ioFileNames);
 	}
@@ -41,7 +42,7 @@ public class ParticleWorkload {
 	
 	public static void Run(ArgumentValues args, IOFileNames ioFileNames) throws IOException {
 		BinCalculationUtility utility = new BinCalculationUtility(args);
-		
+	    IntegertoString itos = new IntegertoString();		
 		ParticleElementMap firstInput = new ParticleElementMap(ioFileNames.firstInput);
 //		StringRankToElementMap secondInput = new StringRankToElementMap(ioFileNames.secondInput);
 //		StringBinToRankMap thirdInput = new StringBinToRankMap(ioFileNames.thirdInput);
@@ -54,7 +55,7 @@ public class ParticleWorkload {
 
 		
 		//version 3.0
-		StringGhostParticleOutput output3 = new StringGhostParticleOutput(elemData,utility.nDxGp,utility.nDyGp,utility.nDzGp); 		
+		StringGhostParticleOutput output3 = new StringGhostParticleOutput(elemData,utility.nDxGp,utility.nDyGp,utility.nDzGp,itos); 		
 		long startTime = System.nanoTime();
 		while(firstInput.hasNext()) {
 //			ParticleElementEntry entry = firstInput.getNext();
@@ -115,9 +116,9 @@ public class ParticleWorkload {
 				}
 				
 				Integer actualRank = elemData.GetRankFromElem(actualElement);
-				output1.Insert(Integer.toString(actualRank), entry.timeStep);		
-				output2.Insert(syntheticParticle, Integer.toString(actualRank), entry.timeStep);
-				output3.Insert(bin, Integer.toString(actualRank), entry.timeStep);				
+				output1.Insert(itos.GetString(actualRank), entry.timeStep);		
+				output2.Insert(syntheticParticle, itos.GetString(actualRank), entry.timeStep);
+				output3.Insert(bin, itos.GetString(actualRank), entry.timeStep);				
 				
 				syntheticParticle = null;
 				newlocation = null;
