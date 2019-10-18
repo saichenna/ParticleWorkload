@@ -50,7 +50,7 @@ public class ParticleWorkload {
 //		StringScalingData scalingInput = new StringScalingData(args.elementScaling,ioFileNames.fourthInput);
 		System.out.println("Completed generating bin information!!");
 		StringParticleCount output1 = new StringParticleCount();
-		StringParticleMovement output2 = new StringParticleMovement();
+		StringParticleMovement output2 = new StringParticleMovement(args.particleScaling,args.delta);
 //		StringGhostParticleOutput output3 = new StringGhostParticleOutput(thirdInput,utility.nDxGp,utility.nDyGp,utility.nDzGp); //Change made over here
 
 		
@@ -118,6 +118,7 @@ public class ParticleWorkload {
 				Integer actualRank = elemData.GetRankFromElem(actualElement);
 				output1.Insert(itos.GetString(actualRank), entry.timeStep);		
 				output2.Insert(syntheticParticle, itos.GetString(actualRank), entry.timeStep);
+//				output2.Insert(syntheticParticle, actualRank, entry.timeStep);				 
 				output3.Insert(bin, itos.GetString(actualRank), entry.timeStep);				
 				
 				syntheticParticle = null;

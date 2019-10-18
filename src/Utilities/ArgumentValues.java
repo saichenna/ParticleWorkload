@@ -23,6 +23,7 @@ public ArgumentValues(String inputFilePath) throws NumberFormatException, IOExce
 	this.totalranks = Integer.parseInt(reader.readLine());
 	this.firsttimestep = Integer.parseInt(reader.readLine());
 	this.secondtimestep = Integer.parseInt(reader.readLine());
+	this.delta = Integer.parseInt(reader.readLine());
 	this.elementSizeX = Double.parseDouble(reader.readLine());
 	this.elementSizeY = Double.parseDouble(reader.readLine());
 	this.elementSizeZ = Double.parseDouble(reader.readLine());
@@ -54,6 +55,8 @@ public ArgumentValues(String inputFilePath) throws NumberFormatException, IOExce
 	public int firsttimestep;
 	
 	public int secondtimestep;
+	
+	public int delta;
 	
 	public double elementSizeX;
 	

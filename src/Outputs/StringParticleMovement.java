@@ -1,18 +1,29 @@
 package Outputs;
 
 import java.util.Hashtable;
+import java.util.List;
 
 import Entities.Particle;
 import Utilities.NestedCounterHashtable;
+import Utilities.OldParticlePosition;
 
 public class StringParticleMovement {
 	private Hashtable<Particle, String> oldParticlePosition;
 	
+//	private OldParticlePosition oldParticlePosition;
+	
+	private int delta;
+	
+
+	
 	private NestedCounterHashtable<RankDiff, Integer> output;
 	
-	public StringParticleMovement() {
+	public StringParticleMovement(int particlescaling, int delta) {
 		this.oldParticlePosition = new Hashtable<>();
+		
+//		this.oldParticlePosition = new OldParticlePosition(particlescaling);
 		this.output = new NestedCounterHashtable<>();
+		this.delta = delta;
 	}
 	
 	public int GetMovedParticleCount(String sourceRank, String destinationRank, String timeStep) {
@@ -20,7 +31,7 @@ public class StringParticleMovement {
 	}
 	
 	public void Insert(Particle p, String currentRank, String timeStep) {
-		
+//	public void Insert(Particle p, int currentRank, String timeStep) {		
 		if(this.oldParticlePosition.containsKey(p)) {
 			String oldRank = this.oldParticlePosition.get(p);
 			if(!oldRank.equals(currentRank)) {
@@ -30,6 +41,25 @@ public class StringParticleMovement {
 		else {
 			this.oldParticlePosition.put(p, currentRank);
 		}
+		
+		//updated to reduce memory consumption of oldParticlePosition hashtable
+//		if(this.oldParticlePosition.ContainsKey(p)) {
+//			int oldRank = this.oldParticlePosition.Get(p);
+//			if(oldRank == -1) {
+//				this.oldParticlePosition.Insert(p, currentRank);
+//			}
+//			else {
+//				if(oldRank != currentRank) {
+//					this.output.Insert(new RankDiff(oldRank,currentRank), Integer.parseInt(timeStep) - this.delta);
+//				}
+//			}
+//			
+//		}
+//		else {
+//			this.oldParticlePosition.Insert(p, currentRank);
+//		}
+//		
+		
 	}
 	
 	public String toString() {
